@@ -4,6 +4,7 @@ function setup() {
   createCanvas(500, 500);
   f1= loadFont ("assets/BetterGrade.ttf") ;
   f2= loadFont("assets/HAPPYWINTER.ttf") ;
+  textAlign(CENTER) ;
 }
 
 function draw() {
@@ -14,6 +15,7 @@ function draw() {
 
   textFont(f2) ;
   textSize(24) ;
-  text("i like turtles", width/2, 100) ;
+  text("i like turtles", width/2, 150) ;
+
 
 }

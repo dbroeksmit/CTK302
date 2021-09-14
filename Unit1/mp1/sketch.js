@@ -9,6 +9,9 @@ function setup() {
 
 function draw() {
 
+
+
+
   background(100)
 
 
@@ -145,6 +148,9 @@ function draw() {
   fill(0);
   text(mouseX + ", " + mouseY, 40, 40);
 
+
+    text("During a freak accident at the cola factory, Steve was fused with a vending machine. \n A robotics genius, he was able to fashion rocket boosters from scrap metal. \n He goes around fighting crime and providing beverages to the thirsty.", 20, 20 ) ;
+
 }
 
 
@@ -157,7 +163,6 @@ function mouseReleased() {
   print(mouseX + ", " + mouseY);
 }
 
- 
 
 
 

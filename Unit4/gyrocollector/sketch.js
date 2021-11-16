@@ -58,7 +58,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(hoop, 0, 0, 100, 100);
+  image(hoop, 0, 0, 50, 50);
   //fill('green');
   //ellipse(0, 0, 80, 80);
   pop();

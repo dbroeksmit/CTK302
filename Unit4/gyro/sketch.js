@@ -62,7 +62,7 @@ function draw() {
   noStroke();
   textSize(75);
   textAlign(CENTER);
-  // text("my spidey sense are tingling, batman !", width / 2, height / 2);
+  text("my spidey sense are tingling, batman !", width / 2, height / 2);
 
 }
 

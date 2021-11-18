@@ -5,7 +5,9 @@ var y = 0;
 var z = 0;
 var xPosition = 0;
 var yPosition = 0;
-let hoop ;
+let whitehoop ;
+let basketball ;
+let bg ;
 
 // var bunnyImage;
 var cars = [];
@@ -17,8 +19,9 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  hoop = loadImage("assets/hoop.png") ;
-
+  bg = loadImage("assets/background.jpg") ;
+  whitehoop = loadImage("assets/whitehoop.png") ;
+  basketball = loadImage("assets/basketball.png");
 
   // initialize accelerometer variables
   alpha = 0;
@@ -44,12 +47,14 @@ function setup() {
 function draw() {
 
   background('#c6f5ff'); // light blue
-
+  image(bg, width/2, height/2, width, height) ;
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
   // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -18, 18, 0, width);
   yPosition = map(beta, 25, 45, 0, height);
+  //xPosition = mouseX ;
+  //yPosition = mouseY ;
 
 
   // move the frog around the screen
@@ -58,7 +63,7 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  image(hoop, 0, 0, 50, 50);
+  image(whitehoop, 0, 0, 50, 50);
   //fill('green');
   //ellipse(0, 0, 80, 80);
   pop();
@@ -79,7 +84,7 @@ function draw() {
 
   // MORE DECORATIONS - write that pretty ATK type on top.
   fill('white');
-  textSize(40);
+  textSize(20);
   textAlign(CENTER);
   text("im ballin'", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
@@ -88,18 +93,18 @@ function draw() {
   // Just a bunch of text commands to display data coming in from addEventListeners
   textAlign(LEFT);
   textSize(20);
-  fill('black');
-  text("orientation data:", 25, 25);
-  textSize(15);
-  text("alpha: " + alpha, 25, 50);
-  text("beta: " + beta, 25, 70);
-  text("gamma: " + gamma, 25, 90);
-  textSize(20);
-  text("acceleration data:", 25, 125);
-  textSize(15);
-  text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
-  text("y = " + y, 25, 170);
-  text("z = " + z, 25, 190);
+  //fill('black');
+  // text("orientation data:", 25, 25);
+  // textSize(15);
+  // text("alpha: " + alpha, 25, 50);
+  // text("beta: " + beta, 25, 70);
+  // text("gamma: " + gamma, 25, 90);
+  // textSize(20);
+  // text("acceleration data:", 25, 125);
+  // textSize(15);
+  // text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
+  // text("y = " + y, 25, 170);
+  // text("z = " + z, 25, 190);
 
 
 }
@@ -150,7 +155,7 @@ function Car() {
   this.display = function() {
 
     // maybe use an image here instead!
-    image(hoop, this.pos.x, this.pos.y) ;
+    image(basketball, this.pos.x, this.pos.y, 50, 50) ;
     //fill(this.r, this.g, this.b, this.a);
     //ellipse(this.pos.x - 50, this.pos.y, 50, 50);
     //ellipse(this.pos.x + 50, this.pos.y, 50, 50);
